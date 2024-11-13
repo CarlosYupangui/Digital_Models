@@ -20,3 +20,8 @@ use App\Http\Controllers\ProductoController;
 });*/
 
 Route::get('/cliente', [ClienteController::class, 'index']);
+Route::post('/guardar_info_Cli', [ClienteController::class, 'guardarCliente']);
+Route::get('/infoCliente', [ClienteController::class, 'infoCliente']);
+Route::get('/editarCli/{id}', [ClienteController::class, 'editarCli']);
+Route::put('/actualizarInfoCli/{id}', [ClienteController::class, 'actualizarCli']);
+Route::delete('/eliminarCli/{id}', [ClienteController::class, 'eliminarCli']);
