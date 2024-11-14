@@ -1,0 +1,81 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    background-color: #17a589;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.botones button {
+    margin: 15px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s;
+    flex: 1 1 100px;
+}
+
+.botones button:hover {
+    transform: scale(1.05); 
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: #28b463;
+}
+
+.botones button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+@media (max-width: 768px) {
+    .botones {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .botones button {
+        font-size: 1em;
+        padding: 8px 16px;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .botones {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .botones button {
+        font-size: 30px;
+        padding: 8px 12px;
+    }
+}

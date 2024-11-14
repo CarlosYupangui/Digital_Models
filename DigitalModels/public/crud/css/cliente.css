@@ -1,0 +1,196 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #26a69a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    background-color: #007BFF;
+    padding: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+header nav ul li {
+    margin: 10px;
+}
+
+header nav ul li a button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #0056b3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s;
+}
+
+header nav ul li a button:hover {
+    background-color: #2ecc71;
+    color: #333;
+    transform: scale(1.05); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+header nav ul li a button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+main {
+    width: 90%;
+    max-width: 500px;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #4dd0e1;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: left;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin: 20px 0;
+    transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+h2:hover {
+    color: #ff6f61; 
+    transform: scale(1.1);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
+}
+
+
+main label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+    transition: color 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+main label:hover {
+    color: #3f51b5; 
+    transform: scale(1.05); 
+}
+
+main input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9fafc;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+main input[type="text"]:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+
+main input[type="text"]:hover {
+    border-color: #0056b3;
+}
+
+main input[type="text"] + label {
+    margin-top: 15px;
+}
+
+main button{
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+main button:hover {
+    color: white;
+    background-color: #0056b3; 
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 5px 0;
+    }
+
+    main {
+        width: 95%;
+    }
+
+    header nav ul li a button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    main label {
+        font-size: 13px;
+    }
+
+    main input[type="text"] {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px 0;
+    }
+
+    header nav ul li a button {
+        font-size: 20px;
+        padding: 6px 12px;
+    }
+
+    main {
+        width: 100%;
+        padding: 15px;
+    }
+
+    main label {
+        font-size: 18px;
+    }
+
+    main input[type="text"] {
+        padding: 6px;
+        font-size: 18px;
+    }
+    button{
+        font-size: 25px;
+    }
+}

@@ -7,7 +7,7 @@ use App\Models\Cliente;
 
 class ClienteController extends Controller
 {
-    public function index(){
+    public function indexCli(){
       $getCliente = Cliente::all();
       return view('cliente', compact('getCliente'));
     }
@@ -40,4 +40,5 @@ class ClienteController extends Controller
       $eliminarCliente->delete();
       return redirect()->to('infoCliente');
     }
+    
 }
